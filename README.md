@@ -4,14 +4,7 @@ Live demo at: https://jako-k.github.io/metaballs-2D/
 
 https://github.com/user-attachments/assets/b877e1a0-acbd-4165-b664-ef4a1242e23d
 
-
-
-## Introduction
-
-This project is centered around the implementation of 2D metaballs in WebGL and will be comprised of four sections: *Method*, *Implementation*, *Results*, and *Discussion*.  
-The *Method* section will go over the mathematical theory behind 2D metaballs. *Implementation* covers the more practical aspects with precise implementation details and a break down of the user interface. *Results* provides an overview of the finished application. And finally, a quite conventional *Discussion* section in the end.
-
-## Method
+## Theory
 
 Metaballs get their characteristic look by merging boundaries when close. One way of obtaining this look is by starting from the parametric definition of a filled circle (eq. 1):
 
@@ -123,7 +116,7 @@ if (v < 1.0)
 f_color = vec4(v * r_slider, v * g_slider, v * b_slider, 1.0);
 ```
 
-### User Interface Controls
+### User Interface Controls <a name="user-input"></a>
 
 - **Resolution Slider**  
   Controls $N$, which indirectly controls the cell size $S$.
