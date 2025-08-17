@@ -21,13 +21,13 @@ $$
 where $(x, y)$ is an arbitrary Cartesian coordinate, $(x_c, y_c)$ is the circle center, and $r$ is the circle's radius. The inequality sign ensures a circle with perfectly sharp boundaries, where all points inside or exactly on the circle's periphery are valid. By removing the inequality from the second equation, i.e. focusing solely on its left‐hand side, it can function as an inverse Euclidean distance measure, of sorts (eq. 3):
 
 $$
-d(x,\,y\,,x_c\,,y_c\,,r) = \frac{r^2}{(x - x_c)^2 + (y - y_c)^2}
+d(x, y, x_c, y_c, r) = \frac{r^2}{(x - x_c)^2 + (y - y_c)^2}
 $$
 
 From this, we can deduce that points $(x, y)$ close to $(x_c, y_c)$ will yield larger values, while points farther away will yield smaller values. This fact can be used to construct filled circles with soft boundaries by interpreting the output as intensity or pixel brightness. For a single circle this is all that will happen. But if we accumulate the result of $d(\dots)$ from multiple circles, the characteristic metaball behavior can arise. Mathematically this can be summarized as (eq. 4):
 
 $$
-f(x,y) = \sum_{i=0}^{C} d(x,\,y\,,x_{i,c}\,,y_{i,c}\,,r_i)
+f(x,y) = \sum_{i=0}^{C} d(x, y, x_{i,c}, y_{i,c}, r_i)
 $$
 
 where $C$ is the number of circles, $(x_{i,c},y_{i,c})$ is the center of the $i$‑th circle and $r_i$ is its radius.  
